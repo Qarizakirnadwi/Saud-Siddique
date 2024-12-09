@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana Saud Siddique</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #004080; /* Dark blue */
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #FFD700; /* Golden */
+        }
+
+        /* Responsive Navbar */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+                background-color: #004080;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        /* Home Section Styling */
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .home .container {
+            flex: 1 1 30%;
+            max-width: 30%;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .home .container img {
+            width: 100%;
+            height: 50%;
+            border-radius: 8px;
+        }
+
+        .home .container h3 {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: #004080;
+        }
+
+        .home .container p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .home .container {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Maulana Saud Siddique</div>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#speeches">Speeches</a></li>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="home">
+        <div class="container">
+            <img src="saud bhai.jpg" alt="Maulana Saud Siddique">
+            <h3>Maulana Saud Siddique</h3>
+            <p>Renowned Islamic Orator known for his inspiring speeches and dedication to spreading the message of peace and unity.</p>
+        </div>
+        <div class="container">
+            <h3>About Him (English)</h3>
+            <p>Maulana Saud Siddique is a distinguished Islamic scholar from Furfura Sharif, West Bengal, who has touched countless lives through his eloquence and deep knowledge of the Qur'an and Sunnah.</p>
+        </div>
+        <div class="container">
+            <h3>About Him (Bangla)</h3>
+            <p>মাওলানা সঊদ সিদ্দিক একজন বিশিষ্ট ইসলামী বক্তা, যিনি পশ্চিমবঙ্গের ফুরফুরা শরীফ থেকে আগত। তার বর্ণনাভঙ্গি এবং ইসলামী জ্ঞানের গভীরতায় তিনি মানুষের হৃদয় স্পর্শ করেছেন।</p>
+        </div>
+    </section>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
